@@ -1,6 +1,6 @@
 # MarketSpace
 
-<img width="600" height="400" src="https://github.com/fabianocsouza/marketspace/assets/57264174/59a57223-47fd-40be-8782-db13be6eaf2f" alt="Imagem 1">
+<img width="600" height="400" src="https://github.com/fabianocsouza/marketspace/assets/57264174/f64037bf-d89d-4928-9329-e5346c457024" alt="Imagem 1">
 
 ## Sobre o desafio
 
