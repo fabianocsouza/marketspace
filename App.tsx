@@ -4,8 +4,9 @@ import { useFonts, Karla_200ExtraLight, Karla_300Light, Karla_400Regular, Karla_
 
 import { THEME } from './src/theme';
 
-import { SignIn } from './src/screen/SignIn';
+import { SignUp } from '@screens/SignUp';
 import { Loading } from './src/components/Loading';
+import { SignIn } from '@screens/SignIn';
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Karla_200ExtraLight, Karla_300Light, Karla_400Regular, Karla_700Bold });
@@ -13,7 +14,7 @@ export default function App() {
   return (
     <NativeBaseProvider theme={THEME}>
       <StatusBar barStyle="dark-content" backgroundColor="transparent" translucent/>
-      {fontsLoaded ? <SignIn/> : <Loading/>}
+      {fontsLoaded ? <SignUp/> : <Loading/>}
     </NativeBaseProvider>
   );
 }
