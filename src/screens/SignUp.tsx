@@ -14,13 +14,11 @@ export function SignUp() {
   const [ secret, setSecret ] = useState(true);
 
   return (
-    <ScrollView flex={1} bg="gray.600">
+    <ScrollView flex={1} bg="gray.600" px="10">
       <SafeAreaView>
         <Center mt="2" p="5">
           <MarkSVG style={{ width:76, height:44}}/>
-
           <Heading fontFamily="heading" mt="2" >Boas vindas!</Heading>
-
           <Text mt="2" fontFamily="mono" fontSize="md" textAlign="center">
             Crie sua conta e use o espaço para comprar itens variados e vender
             seus produtos
@@ -30,18 +28,13 @@ export function SignUp() {
         <Center mt="2">
           <Box mb="2">       
             <Image/>
-
             <IconButton mt="-12" left="16" color="gray.600" icon="PencilSimpleLine"
               _pressed={{bg: "blue.dark"}}
             />      
           </Box>
-
           <Input placeholder="Nome"/>
-
           <Input placeholder="E-mail"/>
-
           <Input placeholder="Telefone"/>
-
           <Input placeholder="Senha" type={secret ? "text":"password"}
             InputRightElement={
             <IconButton  right={2} color="gray.300" icon={secret  ? "Eye": "EyeSlash" }
@@ -64,7 +57,6 @@ export function SignUp() {
 
         <Center mt="10">
           <Text>Já tem uma conta?</Text>
-          
           <Button title="Ir para o login"/>
         </Center>
       </SafeAreaView>

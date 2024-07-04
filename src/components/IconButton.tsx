@@ -1,10 +1,11 @@
 import { Button, IButtonProps, Icon } from "native-base";
-import { PencilSimpleLine, Eye, EyeSlash } from "phosphor-react-native";
+import { PencilSimpleLine, Eye, EyeSlash, Faders } from "phosphor-react-native";
 
 const  Icons = {
   PencilSimpleLine: PencilSimpleLine,
   Eye: Eye,
-  EyeSlash: EyeSlash
+  EyeSlash: EyeSlash,
+  Faders: Faders
 }
 
 type Props = IButtonProps & {

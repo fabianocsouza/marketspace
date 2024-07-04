@@ -12,7 +12,7 @@ export function SignIn() {
   const [ secret, setSecret ] = useState(true);
   return (
     <Center flex={1} bg="gray.700">
-      <Center mt="-32" bg="gray.600" w="100%" h="650" rounded="30">
+      <Center mt="-20" bg="gray.600" w="100%" h="650" rounded="30" px="10">
         <Center mt="16">
           <MarkSVG style={{ width:96, height:64}}/>
           <LogoSVG style={{marginTop: 20, width: 300, height: 33}} />
