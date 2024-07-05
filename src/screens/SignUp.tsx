@@ -8,15 +8,18 @@ import { Image } from "@components/Image";
 import { Input } from "@components/Input";
 import { Button } from "@components/Button";
 import { IconButton } from "@components/IconButton";
-
+import { useNavigation } from "@react-navigation/native";
 
 export function SignUp() {
   const [ secret, setSecret ] = useState(true);
-
+  const navigation = useNavigation();
+  function handleGoBack(){
+    navigation.goBack()
+  }
   return (
     <ScrollView flex={1} bg="gray.600" px="10">
       <SafeAreaView>
-        <Center mt="2" p="5">
+        <Center mt="-2" p="5">
           <MarkSVG style={{ width:76, height:44}}/>
           <Heading fontFamily="heading" mt="2" >Boas vindas!</Heading>
           <Text mt="2" fontFamily="mono" fontSize="md" textAlign="center">
@@ -57,7 +60,9 @@ export function SignUp() {
 
         <Center mt="10">
           <Text>Já tem uma conta?</Text>
-          <Button title="Ir para o login"/>
+          <Button title="Ir para o login"
+          onPress={handleGoBack}
+          />
         </Center>
       </SafeAreaView>
     </ScrollView>

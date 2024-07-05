@@ -1,7 +1,8 @@
-import { Box, HStack, Heading, Pressable, Text, Image as ImageAds, VStack } from 'native-base';
+import { HStack, Heading, Pressable, Text, Image as ImageAds, VStack } from 'native-base';
 
 import imageUserPNG from '@assets/user-1.png'
 import imageAdsPNG from '@assets/ads.png'
+
 import { Image } from './Image';
 import { StatusProduct } from './StatusProduct';
 

@@ -1,5 +1,5 @@
-import { Box, HStack, Heading, Pressable, Text, VStack } from "native-base";
-import { ArrowLeft, ArrowRight, Tag } from "phosphor-react-native";
+import { ArrowRight, Tag } from "phosphor-react-native";
+import { HStack, Heading, Pressable, Text, VStack } from "native-base";
 
 export function AdsCard() {
   return (

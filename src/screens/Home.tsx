@@ -1,14 +1,16 @@
-import { Image } from '@components/Image';
-import { Box, FlatList, HStack, Heading, ScrollView, Text, VStack } from 'native-base';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { MagnifyingGlass, Plus } from 'phosphor-react-native';
+import { Box, FlatList, HStack, Heading, Text, VStack } from 'native-base';
 
 import imageUserPNG from '@assets/user.png';
+
+import { Image } from '@components/Image';
 import { Button } from '@components/Button';
-import { MagnifyingGlass, Plus } from 'phosphor-react-native';
-import { AdsCard } from '@components/AdsCard';
-import { Input } from '@components/Input';
-import { IconButton } from '@components/IconButton';
+
 import { Ads } from '@components/Ads';
+import { Input } from '@components/Input';
+import { AdsCard } from '@components/AdsCard';
+import { IconButton } from '@components/IconButton';
 
 export function Home() {
   return (

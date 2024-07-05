@@ -7,12 +7,18 @@ import { Input } from '@components/Input';
 import { Button } from '@components/Button';
 import { IconButton } from '@components/IconButton';
 import { useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
+import { AuthNavigationRoutesProps } from '@routes/auth.routes';
 
 export function SignIn() {
   const [ secret, setSecret ] = useState(true);
+  const navigation = useNavigation<AuthNavigationRoutesProps>();
+  function handleNewAccount(){
+    navigation.navigate('signUp')
+  }
   return (
     <Center flex={1} bg="gray.700">
-      <Center mt="-20" bg="gray.600" w="100%" h="650" rounded="30" px="10">
+      <Center mt="-32" bg="gray.600" w="100%" h="650" rounded="30" px="10">
         <Center mt="16">
           <MarkSVG style={{ width:96, height:64}}/>
           <LogoSVG style={{marginTop: 20, width: 300, height: 33}} />
@@ -36,7 +42,9 @@ export function SignIn() {
 
       <Center mt="16">
         <Text fontFamily="mono"  fontSize="md">Anda não tem acesso?</Text>
-        <Button title="Criar uma conta"/> 
+        <Button title="Criar uma conta"
+          onPress={handleNewAccount}
+        /> 
       </Center>
     </Center>
   );

@@ -4,6 +4,7 @@ type Props = IButtonProps & {
   title: string;
   variant?: 'gray' |'black' | 'blue'
 }
+
 export function Button({title, variant = 'gray',  ...rest }:Props) {
   return (
     <ButtonNativeBase
