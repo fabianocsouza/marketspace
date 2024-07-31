@@ -1,55 +1,24 @@
-import { Platform } from 'react-native';
-import { House, Tag } from 'phosphor-react-native';
-import { BottomTabNavigationProp, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NativeStackNavigationProp, createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import { Home } from '@screens/Home';
-import { MyAds } from '@screens/MyAds';
-import { useTheme } from 'native-base';
+import { TabScreens } from "./TabScreens";
 
-type AppRoutes = {
+import { Home } from "@screens/Home";
+import { AdsForm } from "@screens/AdsForm";
+
+type AppRoutes = { 
   home: undefined;
-  myAds: undefined;
-  exit: undefined;
+  adsForm: {type: string};
+  tabs: undefined;
 }
-
-export type AuthNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>;
+export type HomeScreensNavigatorRoutesProps = NativeStackNavigationProp<AppRoutes>;
 
 export function AppRoutes() {
-  const { Navigator, Screen} =  createBottomTabNavigator<AppRoutes>();
-
-  const { sizes, colors } = useTheme();
-  const iconSize = sizes[8];
-
-  return(
-    <Navigator
-      screenOptions={{
-        headerShown: false,
-        tabBarShowLabel: false,
-        tabBarActiveTintColor: colors.gray[200],
-        tabBarInactiveTintColor: colors.gray[400],
-        tabBarStyle: {
-          backgroundColor: colors.gray[700],
-          borderTopWidth: 0,
-          height: Platform.OS === "android" ? "auto" : 96,
-          paddingBottom: sizes[10],
-          padding: sizes[6]
-        }
-      }}
-    >
-      <Screen name="home" component={Home}
-        options={{
-          tabBarIcon: ({color}) => (
-            <House color={color} size={iconSize} />
-          )
-        }}
-      />
-      <Screen name="myAds" component={MyAds}
-        options={{
-          tabBarIcon: ({ color }) => (
-            <Tag color={color} size={iconSize}/>
-          )
-        }}
-      />
+    const { Navigator, Screen } = createNativeStackNavigator<AppRoutes>();
+  return (
+    <Navigator screenOptions={{ headerShown: false, animation: "fade" }}>
+      <Screen name="tabs" component={TabScreens}/>
+      <Screen name="home" component={Home}/>
+      <Screen name="adsForm" component={AdsForm}/>
     </Navigator>
-  )
+  );
 }

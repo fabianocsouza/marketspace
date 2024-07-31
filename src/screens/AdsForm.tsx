@@ -1,13 +1,15 @@
-import { Header } from "@components/Header";
 import { HStack, ScrollView } from "native-base";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-export function MyAds() {
+import { Header } from "@components/Header";
+
+export function AdsForm() {
+
   return (
     <ScrollView>
       <SafeAreaView>
         <HStack justifyContent="center">
-          <Header  title="Meus anúncios" iconLeft="Plus" iconRightAtive={false}/>
+          <Header title="Criar anúncio" iconLeftAtive={false}/>
         </HStack>
       </SafeAreaView>
     </ScrollView>

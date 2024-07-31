@@ -11,14 +11,22 @@ import { Ads } from '@components/Ads';
 import { Input } from '@components/Input';
 import { AdsCard } from '@components/AdsCard';
 import { IconButton } from '@components/IconButton';
+import { useNavigation } from '@react-navigation/native';
+import { TabScreensNavigatorProps } from '@routes/TabScreens';
 
 export function Home() {
+  const navigation = useNavigation<TabScreensNavigatorProps>();
+
+  function handleCreateAds(){
+    navigation.navigate("adsForm");
+  }
+
   return (
     <FlatList
       bg="gray.600"
       data={['']}
       keyExtractor={item => item}
-      renderItem={item =>
+      renderItem={_ =>
         (
           <VStack flex={1}  px="8">
           <SafeAreaView>
@@ -32,6 +40,7 @@ export function Home() {
                 </HStack>
                 <Button title="Criar anúncio" variant="black" w="33" mt={2}
                   leftIcon={<Plus color="#EDECEE" size={21}/>}
+                  onPress={handleCreateAds}
                 />
             </HStack>
 
