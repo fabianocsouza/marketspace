@@ -4,7 +4,7 @@ import ImageDefaultPNG from '@assets/avatar.png';
 
 type Props  = IImageProps;
 
-export function Image({...rest}: Props) {
+export function ImageUser({...rest}: Props) {
   return (
     <ImageNativeBase
       w="24" h="24" borderWidth="3" borderColor="blue.light" rounded="full"

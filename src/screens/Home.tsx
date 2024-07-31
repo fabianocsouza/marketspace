@@ -4,7 +4,7 @@ import { Box, FlatList, HStack, Heading, Text, VStack } from 'native-base';
 
 import imageUserPNG from '@assets/user.png';
 
-import { Image } from '@components/Image';
+import { ImageUser } from '@components/ImageUser';
 import { Button } from '@components/Button';
 
 import { Ads } from '@components/Ads';
@@ -32,7 +32,7 @@ export function Home() {
           <SafeAreaView>
             <HStack alignItems="center" justifyContent="space-between" mt={3}>
                 <HStack alignItems="center">
-                  <Image source={imageUserPNG} w="14" h="14"/>
+                  <ImageUser source={imageUserPNG} w="14" h="14"/>
                   <VStack ml="4">
                     <Text fontFamily="body" fontSize="lg" >Boas vindas,</Text>
                     <Heading fontFamily="heading" fontSize="lg">Maria!</Heading>

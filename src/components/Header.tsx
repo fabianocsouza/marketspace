@@ -30,13 +30,13 @@ export function Header({ title='', iconLeft="PencilSimpleLine", iconRight="Arrow
   }
   
   return (
-    <HStack mt={6} px={4} justifyContent="space-between" w="96">
+    <HStack mt={6} justifyContent="space-between" w="96">
       {
         iconRightAtive
         ? <Pressable
             onPress={handleGoBack}
           >
-           <Icon as={Icons[iconRight]}  name={iconRight} color="gray.200" />
+           <Icon as={Icons[iconRight]}  name={iconRight} color="gray.100" />
           </Pressable>
         : <Box/>
       }
@@ -46,7 +46,7 @@ export function Header({ title='', iconLeft="PencilSimpleLine", iconRight="Arrow
           ? <Pressable
             onPress={handleAdsForm}
             >
-            <Icon as={Icons[iconLeft]}  name={iconLeft} color="gray.200" />
+            <Icon as={Icons[iconLeft]}  name={iconLeft} color="gray.100" />
             </Pressable>
           : <Box/>
         }
